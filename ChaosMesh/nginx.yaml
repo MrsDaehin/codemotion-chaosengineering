@@ -38,3 +38,15 @@ spec:
       containers:
       - image: nginx
         name: nginx
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: shine-on-you-crazy-diamond-service
+spec:
+  selector:
+    app: cant-touch-dis
+  ports:
+  - port: 80
+    targetPort: 80
+  type: ClusterIP
